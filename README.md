@@ -12,7 +12,7 @@ It uses **GroundingDINO** for text-conditioned detection, optional **CLIP** reâ€
 ### 0) Clone this repository
 ```bash
 git clone https://github.com/Rachitb0611/scene_localise.git
-cd scene-grounding-cpu
+cd scene_localise
 ```
 
 ### 1) Create & activate a virtual environment
