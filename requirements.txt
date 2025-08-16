@@ -11,3 +11,4 @@ tqdm
 numpy>=1.21.0
 regex
 ensemble-boxes
+git+https://github.com/facebookresearch/segment-anything.git
