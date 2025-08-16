@@ -44,6 +44,8 @@ This will create/refresh:
 - `weights/sam_vit_h_4b8939.pth`
 
 > If any URL is blocked in your environment, the script will suggest a manual backup URL and where to place the files.
+GroundingDINO: https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
+SAM: https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
 
 ### 4) Run the demo
 ```bash
