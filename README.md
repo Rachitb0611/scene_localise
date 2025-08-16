@@ -90,12 +90,12 @@ The script saves outputs under `results/` including: the best bounding box, SAM 
 ```
 scene-grounding-cpu/
 ├─ main_1.py                # CPU pipeline (GroundingDINO + optional CLIP + SAM)
+├─ main_2.py                # Also addresses the issue of negative query
 ├─ requirements.txt
 ├─ scripts/
 │  └─ fetch_assets.py       # Clones repos & downloads model weights
 ├─ documentation.md         # This is a report that covers the technical approach of solution, and information on models and techniques used 
 ├─ doc.pdf                  # This is a report which covers the overall aspect of the solution. This is more of a general presentation not going in much technical details
-├─ data/                    # (You provide) test images
 ├─ results/                 # Outputs (auto-created)
 ├─ weights/                 # Downloaded model weights
 └─ .gitignore
