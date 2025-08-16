@@ -65,7 +65,7 @@ The script saves outputs under `results/` including: the best bounding box, SAM 
 
 ## Installation Guide (Detailed)
 
-1. **Python 3.9+ recommended**  
+1. **Python 3.9 recommended**  
    Create a venv and install the exact requirements from `requirements.txt` for reproducibility.
 2. **Assets Fetcher**  
    Run `python scripts/fetch_assets.py` to:
