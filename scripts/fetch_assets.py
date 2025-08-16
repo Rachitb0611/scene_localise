@@ -1,7 +1,7 @@
 import os
 import sys
 import subprocess
-import urllib.request
+import requests
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 WEIGHTS_DIR = os.path.join(ROOT, "weights")
@@ -39,9 +39,23 @@ def download(url, out_path):
         return
     try:
         print(f"[download] {url} -> {out_path}")
-        with urllib.request.urlopen(url) as r, open(out_path, "wb") as f:
-            f.write(r.read())
-        print("[ok] Downloaded.")
+        with requests.get(url, stream=True) as r:
+            r.raise_for_status()
+            total = int(r.headers.get("content-length", 0))
+            with open(out_path, "wb") as f:
+                downloaded = 0
+                for chunk in r.iter_content(chunk_size=8192):
+                    if chunk:
+                        f.write(chunk)
+                        downloaded += len(chunk)
+                        if total > 0:
+                            done = int(50 * downloaded / total)
+                            sys.stdout.write("\r[%s%s] %d%%" % (
+                                "=" * done, " " * (50 - done),
+                                100 * downloaded / total
+                            ))
+                            sys.stdout.flush()
+        print("\n[ok] Downloaded.")
     except Exception as e:
         print(f"[warn] Could not download automatically: {e}")
         print(f"       Please download manually and place it at: {out_path}")
