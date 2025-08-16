@@ -3,7 +3,7 @@
 This repository contains a **CPU-only** pipeline for grounding natural language queries in dense images.  
 It uses **GroundingDINO** for text-conditioned detection, optional **CLIP** re‑ranking, tiling for large images, and **SAM** for fine-grained segmentation of the selected region.
 
-> ✅ You selected this approach as your final pipeline. This repo is structured so others can reproduce it easily on their machines, including cloning the required upstream repos and downloading the model weights via a single Python script.
+> You selected this approach as your final pipeline. This repo is structured so others can reproduce it easily on their machines, including cloning the required upstream repos and downloading the model weights via a single Python script.
 
 ---
 
@@ -11,7 +11,7 @@ It uses **GroundingDINO** for text-conditioned detection, optional **CLIP** re�
 
 ### 0) Clone this repository
 ```bash
-git clone <your_repo_url>.git
+git clone https://github.com/Rachitb0611/scene_localise.git
 cd scene-grounding-cpu
 ```
 
